@@ -1,0 +1,54 @@
+<script language="JavaScript">function MM_jumpMenu(targ,selObj,restore){eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");if (restore) selObj.selectedIndex=0;}</script>
+<div><div style="float:left";>Navigation:&nbsp;</div><div style="float:left;"><form name="navi">
+<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+<option value="admin.php?wars">[ bitte auswählen ]</option>
+<option value="admin.php?wars-last">Last Wars</option>
+<option value="admin.php?wars-next">Next Wars</option>
+<option value="admin.php?wars-fightus">FightUs-Anfragen</option>
+<option value="admin.php?wars-opponent">Gegnerverwaltung</option>
+<option value="admin.php?wars-teams">Teamverwaltung</option>
+<option value="admin.php?wars-check">Versionskontrolle</option>
+</select>
+</form>
+</div>
+</div>
+<br />
+<br />
+<br />
+<div>
+<form name="selteam" method="POST" action="admin.php?wars-teams-edit">
+<br />
+<br />
+<table width="33%" cellpadding="1" cellspacing="1" border="0" class="border">
+    <tr class="Chead">
+        <td width="100%" colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="50%" class="Cnorm">Bitte Team auswählen!</td>
+        <td width="50%" class="Cmite"><select name="tid">{tid}</select></td>
+    </tr>
+    <tr class="Chead">
+        <td width="100%" colspan="2"><input type="submit" value="Team auswählen" name="uplogo" /></td>
+    </tr>
+</table>
+</form>
+{EXPLODE}
+<form name="logo" method="POST" action="admin.php?wars-teams" enctype="multipart/form-data">
+<table width="33%" cellpadding="1" cellspacing="1" border="0" class="border">
+    <tr>
+        <td width="50%" class="Cnorm">Ausgewähltes Team</td>
+        <td width="50%" class="Cmite">{name}</td>
+    </tr>
+    <tr>
+        <td width="100%" class="Cnorm" colspan="2"><fieldset>
+              <legend>Logo-Upload</legend>
+                    <label>Momentanes Logo: <img src="{logo}" alt="" /></label>
+                <label style="float:left; width:50%;">&nbsp;</label><input style="margin-bottom:2px;" type="file" name="avatarfile" /><br /><font class="smalfont"><br />Empfohlene Größe des Logos: 100x100.</font><br />
+            </fieldset>
+            </td>
+    <tr class="Chead">
+        <td width="100%" colspan="2"><input type="hidden" name="id" value="{id}" /><input type="submit" value="Logo hochladen" name="uplogo" /></td>
+    </tr>
+</table>
+</form>
+</div>

@@ -1,0 +1,133 @@
+
+	<table width="100%" cellpadding="1" cellspacing="1" border="0">
+		<tr>
+			<td width="100%" class="Chead" align="left"><strong>&raquo; Matchübersicht</strong></td>
+		</tr>
+		<tr>
+			<td width="100%" class="Cmite" valign="top">
+				<table width="100%" cellpadding="1" cellspacing="1" border="0">
+					<tr>
+						<td width="100%" colspan="3" class="Cmite">&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="35%" class="Cnorm" align="center" style="font-size: 12px; font-weight: bold;">
+							&nbsp; <img src="{teamlogo}" style="border:1px solid #000000;" /><br />{team}
+						</td>
+						<td width="30%" class="Cmite" style="font-size: 20px;" align="center"><strong>[{owp} : {opp}]</strong><br />{mlink}</td>
+						<td width="35%" class="Cnorm" align="center" style="font-size: 12px; font-weight: bold;">
+							&nbsp; <img src="{logo}" style="border:1px solid #000000;" /><br /> <img src="include/images/flags/{land}" alt="" /> <a href="?clans-{oid}" target="_blank">{gegner}</a>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>	
+					<tr>
+						<td width="100%" align="center" colspan="3"></td>
+					</tr>
+				</table>
+				<table width="100%" cellpadding="1" cellspacing="1" border="0">
+					<tr>
+						<td colspan="3" align="left" class="Chead"><strong>&raquo; Matchdetails</strong></td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" class="Cnorm" align="left">
+							<table width="100%" cellpadding="1" cellspacing="1" border="0">
+								<tr>
+									<td width="33%" class="Cmite">Datum:</td>
+									<td width="67%" class="Cnorm">{datum}</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite">Uhrzeit:</td>
+									<td width="67%" class="Cnorm">{zeit} {_lang_oclock}</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite">Spieltyp:</td>
+									<td width="67%" class="Cnorm">{mtyp} ({mod})</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+						<td width="100%" colspan="3" align="center" class="Cmite">&nbsp;</td>
+					</tr>
+		<tr>
+						<td colspan="3" align="left" class="Chead"><strong>&raquo; Rundenergebnisse</strong></td>
+					</tr>
+					<tr>
+						<td colspan="3" class="Cnorm">
+							{ergliste}
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" align="center" class="Cmite">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="3" align="left" class="Chead"><strong>&raquo; Screenshots</strong></td>
+					</tr>
+					<tr>
+						<td colspan="3" align="center" class="Cnorm">
+							<table width="100%" cellpadding="1" cellspacing="1">
+							{screenliste}
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" align="center" class="Cmite">&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" align="left" class="Chead"><strong>&raquo; Lineup: {team}</strong></td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" align="center" class="Cnorm" style="padding:0px auto 0px auto;"><div style="position: relative;">{memberliste}</div></td>
+					</tr>
+					<tr>
+					<td class="Cmite" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" align="left" class="Chead"><strong>&raquo; Lineup: {gegner}</strong></td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" align="center" class="Cnorm">{lineupopp}</td>
+					</tr>
+					<tr>
+					<td class="Cmite" colspan="3">&nbsp;</td>
+					</tr>
+		<tr>
+			<td width="100%" colspan="3" class="Chead" align="left"><strong>&raquo; Matchbericht</strong></td>
+		</tr>
+		<tr>
+			<td width="100%" colspan="3" class="Cnorm" align="left">{txt}</td>
+		</tr>
+		<tr>
+			<td width="100%" colspan="3" class="Chead" align="center">&nbsp;</td>
+		</tr>
+		
+	</table>
+
+{EXPLODE}
+
+<form action="index.php?wars-more-{id}" method="POST">
+<input type="hidden" name="kommentar_fuer_last_wars" value="yes" />
+<table border="0" cellpadding="2" cellspacing="1" class="border" width="100%">
+<tr>
+	<td class="Chead">{_lang_addcomment}</td>
+</tr><tr>
+	<td class="Cmite"><textarea cols="60" rows="2" name="text"></textarea></td>
+</tr><tr>
+	<td class="Cdark"><input type="submit" value="{_lang_formsub}" /></td>
+</tr>
+</table>
+
+{EXPLODE}
+
+<table border="0" cellpadding="2" cellspacing="1" class="border" width="100%">
+<tr>
+	<td width="10%"class="{class}">{name}</td>
+	<td class="{class}">{text}</td>
+</tr>
+</table>
+
+{EXPLODE}
+</form>

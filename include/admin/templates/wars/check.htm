@@ -1,0 +1,21 @@
+<script language="JavaScript">function MM_jumpMenu(targ,selObj,restore){eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");if (restore) selObj.selectedIndex=0;}</script>
+<div><div style="float:left";>Navigation:&nbsp;</div><div style="float:left;"><form name="navi">
+<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+<option value="admin.php?wars">[ bitte auswählen ]</option>
+<option value="admin.php?wars-last">Last Wars</option>
+<option value="admin.php?wars-next">Next Wars</option>
+<option value="admin.php?wars-fightus">FightUs-Anfragen</option>
+<option value="admin.php?wars-opponent">Gegnerverwaltung</option>
+<option value="admin.php?wars-teams">Teamverwaltung</option>
+<option value="admin.php?wars-check">Versionskontrolle</option>
+</select>
+</form>
+</div>
+</div>
+<br />
+<br />
+<br />
+<div>
+<table cellpadding="0" cellspacing="0" border="0"><tr><td><img src="include/images/icons/admin/wars_last.png" /></td><td width="30"></td><td valign="bottom"><h1>Advanced Wars Versionskontrolle</h1></td></tr></table>
+    <div>Momentan installierte Version: {VERSION} <br /><iframe src="http://www.dastii.de/updatechecker.php?version={VERSION}&modul=advanced" style="border: 0; width: 100%;"></iframe></div>
+</div>

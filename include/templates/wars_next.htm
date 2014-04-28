@@ -1,0 +1,98 @@
+
+	<table width="100%" cellpadding="1" cellspacing="1" border="0">
+		<tr>
+			<td width="100%" class="Chead" align="left"><strong>&raquo; Matchübersicht</strong></td>
+		</tr>
+		<tr>
+			<td width="100%" class="Cmite" valign="top">
+				<table width="100%" cellpadding="1" cellspacing="1" border="0">
+					<tr>
+						<td width="100%" colspan="3" class="Cmite">&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="35%" class="Cnorm" align="center" style="font-size: 12px; font-weight: bold;">
+							&nbsp; <img src="{teamlogo}" style="border:1px solid #000000;" /><br />{team}
+						</td>
+						<td width="30%" class="Cmite" style="font-size: 20px;" align="center"><strong>[{owp} : {opp}]</strong><br />{mlink}</td>
+						<td width="35%" class="Cnorm" align="center" style="font-size: 12px; font-weight: bold;">
+							&nbsp; <img src="{logo}" style="border:1px solid #000000;" /><br /> <img src="include/images/flags/{land}" alt="" /> <a href="?clans-{oid}" target="_blank">{gegner}</a>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>	
+					<tr>
+						<td width="100%" align="center" colspan="3"></td>
+					</tr>
+				</table>
+				<table width="100%" cellpadding="1" cellspacing="1" border="0">
+					<tr>
+						<td colspan="3" align="left" class="Chead"><strong>&raquo; Matchdetails</strong></td>
+					</tr>
+					<tr>
+						<td width="100%" colspan="3" class="Cnorm" align="left">
+							<table width="100%" cellpadding="1" cellspacing="1" border="0">
+								<tr>
+									<td width="33%" class="Cmite">Datum:</td>
+									<td width="67%" class="Cnorm">{datum}</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite">Uhrzeit:</td>
+									<td width="67%" class="Cnorm">{zeit} {_lang_oclock}</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite">Spieltyp:</td>
+									<td width="67%" class="Cnorm">{mtyp} ({mod})</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite">Server:</td>
+									<td width="67%" class="Cnorm">{wo}</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite" style="margin-left:10px;">&raquo; Password:</td>
+									<td width="67%" class="Cnorm">{pw}</td>
+								</tr>
+								<tr>
+									<td width="33%" class="Cmite">TV-Server:</td>
+									<td width="67%" class="Cnorm">{tv}</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="3" align="left" class="Chead"><strong>&raquo; Informationen</strong></td>
+		</tr>
+		<tr>
+			<td width="100%" colspan="3" class="Cnorm" align="left">{txt}</td>
+		</tr>
+		<tr>
+			<td colspan="3" align="left" class="Chead"><strong>&raquo; Zu-/Absagen</strong></td>
+		</tr>
+{EXPLODE}
+<tr class="Cdark">
+	<td>{_lang_present} / {_lang_away} &nbsp; - &nbsp; ( {_lang_promise}: {available} {_lang_from} {_lang_needed}: {needed} )</td>
+</tr>
+{EXPLODE}
+</table>
+<table width="100%" border="0" cellspacing="1" cellpadding="1" class="border">
+<tr class="Cdark">
+	<td class="Cnorm">
+	<form action="index.php?wars-more-{id}" method="POST"><table><tr><td colspan="3"><input name="kom" size="65" /></td></tr>
+  <tr><td><input type="radio" id="zusage" value="zusagen" name="sub" checked /><label for="zusage"  style="cursor: pointer;"> {_lang_promise}</label></td>
+  <td><input type="radio" id="absage" value="absagen" name="sub"  /><label for="absage"  style="cursor: pointer;"> {_lang_cancellation}</label></td>
+  <td align="right"><input type="submit" value="{_lang_formsub}"  /></td></tr></table></form>
+	</td>
+</tr>
+</table>
+{EXPLODE}
+<table width="100%" border="0" cellspacing="1" cellpadding="5" class="border">
+<tr class="{class}">
+	<td>{name} hat für dieses Match {aktion} <u>{_lang_comment}:</u> {kom}</td>
+</tr>
+{EXPLODE}
+</table>
+
+

@@ -1,0 +1,180 @@
+<script language="JavaScript">function MM_jumpMenu(targ,selObj,restore){eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");if (restore) selObj.selectedIndex=0;}</script>
+<div><div style="float:left";>Navigation:&nbsp;</div><div style="float:left;"><form name="navi">
+<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+<option value="admin.php?wars">[ bitte auswählen ]</option>
+<option value="admin.php?wars-last">Last Wars</option>
+<option value="admin.php?wars-next">Next Wars</option>
+<option value="admin.php?wars-fightus">FightUs-Anfragen</option>
+<option value="admin.php?wars-opponent">Gegnerverwaltung</option>
+<option value="admin.php?wars-teams">Teamverwaltung</option>
+<option value="admin.php?wars-check">Versionskontrolle</option>
+</select>
+</form>
+</div>
+</div>
+<br />
+<br />
+<br />
+<div>
+<table cellpadding="0" cellspacing="0" border="0"><tr><td><img src="include/images/icons/admin/wars_next.png" /></td><td width="30"></td><td valign="bottom"><h1>Nextwars</h1></td></tr></table>
+ 
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+    <td width="60%" valign="top">
+        <form action="admin.php?wars-next" method="POST" name="form">
+        <input type="hidden" name="pkey" value="{pkey}" />
+        <input type="hidden" name="status" value="2" />
+        <table class="border" cellpadding="3" cellspacing="1" border="0">
+        {msg}
+     <tr class="Cdark">
+            <td colspan="2"><b>Gegner Wahl</b></td>
+        </tr><tr>
+            <td class="Cmite">Bitte einen Gegner auswählen...</td>
+            <td class="Cnorm"><select name="oid">{oid}</select></td>
+        </tr>
+        <tr class="Cdark">
+            <td colspan="2"><b>News-Optionen</b></td>
+        </tr><tr>
+            <td class="Cmite">News schreiben/editieren?</td>
+            <td class="Cnorm">Ja <input type="radio" name="news" value="0" />, Nein <input type="radio" name="news" value="1" checked="checked" /></td>
+        </tr>
+        <tr>
+            <td class="Cmite">Maps</td>
+            <td class="Cnorm"><input type="text" name="maps" size="50" value="{maps}"/></td>
+        </tr>
+        <tr>
+            <td class="Cmite">Lineup Gegner</td>
+            <td class="Cnorm"><input type="text" name="lineupopp" size="50" value="{lineupopp}"/></td>
+        </tr>
+        <tr>
+            <td class="Cmite">Statement Gegner</td>
+            <td class="Cnorm"><textarea cols="47" rows="5" name="oppstate">{oppstate}</textarea></td>
+        </tr>
+                <tr>
+            <td class="Cmite">Eigenes Lineup</td>
+            <td class="Cnorm"><input type="text" name="lineupowp" size="50" value="{lineupowp}"/></td>
+        </tr>
+        <tr>
+            <td class="Cmite">Eigenes Statement</td>
+            <td class="Cnorm"><textarea cols="47" rows="5" name="owpstate">{owpstate}</textarea></td>
+        </tr>
+        <tr class="Cdark">
+            <td colspan="2"><b>Matchinfo</b></td>
+        </tr>
+        <tr>
+            <td class="Cmite">Datum | Zeit</td>
+            <td class="Cnorm"><table cellpadding="0" cellspacing="0" border="0"><tr><td><input type="text" name="day" value="{day}" size="2"><b>.</b><input type="text" name="mon" value="{mon}" size="2"><b>.</b><input type="text" name="jahr" value="{jahr}" size="4">&nbsp;<b>-</b>&nbsp;<input type="text" name="stu" value="{stu}" size="2"><b>:</b><input type="text" name="min" value="{min}" size="2"><b>:</b><input type="text" name="sek" value="{sek}" size="2">&nbsp;&nbsp;</td><td><input type="checkbox"{kalck} id="kalender" value="yes" name="kalender" /></td><td><label for="kalender" style="cursor: pointer"><span class="smalfont">Kalender eintragen / &auml;ndern.</span></label></td></tr></table></td>
+        </tr><tr>
+            <td class="Cmite">Server</td>
+            <td class="Cnorm"><input type="Text" name="wo" value="{wo}" size="46" ></td>
+        </tr>
+        <tr>
+            <td class="Cmite">&nbsp;&nbsp; » Password</td>
+            <td class="Cnorm"><input type="Text" name="pw" value="{pw}" size="46" ></td>
+        </tr>
+        <tr>
+            <td class="Cmite">TV (e.g. Source TV, HLTV)</td>
+            <td class="Cnorm"><input type="Text" name="tv" value="{tv}" size="46" ></td>
+        </tr><tr>
+            <td class="Cmite">Matchlink</td>
+            <td class="Cnorm"><input type="Text" name="mlink" value="{mlink}" size="46" ></td>
+        </tr><tr>
+            <td class="Cmite">Team</td>
+            <td class="Cnorm"><select name="tid">{tid}</select></td>
+        </tr><tr>
+            <td class="Cmite">XonX</td>
+            <td class="Cnorm"><select onchange="sichtbarA()" name="mod">{mod}<option value="neu">Neu:</option></select>&nbsp;<input type="text" name="newmod" /></td>
+        </tr><tr>
+            <td class="Cmite">Game</td>
+            <td class="Cnorm"><select onchange="sichtbarB()" name="game">{game}<option value="neu">Neu:</option></select>&nbsp;<input type="text" name="newgame" /></td>
+        </tr><tr>
+            <td class="Cmite">Matchtyp</td>
+            <td class="Cnorm"><select onchange="sichtbarC()" name="mtyp">{mtyp}<option value="neu">Neu:</option></select>&nbsp;<input type="text" name="newmtyp" /></td>
+        </tr>
+        <tr>
+            <td class="Cmite">War-Bericht</td>
+            <td class="Cnorm"><textarea cols="47" rows="5" name="txt">{txt}</textarea></td>
+        </tr><tr class="Cdark">
+            <td></td>
+            <td><input type="submit" value="Absenden" name="sub" /></td>
+        </tr>
+        </table>
+        </form>
+    </td>
+    <td width="40%" valign="top">
+        <table class="border" cellpadding="3" cellspacing="1" border="0">
+        <tr class="Chead">
+            <td colspan="5">&Uuml;bersicht</td>
+        </tr>
+{EXPLODE}
+  <tr class="{class}">
+        <td>{game} {gegner}</td><td><a class="smalfont" href="admin.php?wars-info-{id}"><img src="include/images/icons/plus.gif" title="Informationen &uuml;ber die Anfrage" alt="Informationen &uuml;ber die Anfrage"></a></td>
+ 
+            <td align="center"><a href="javascript:del('{id}')"><img src="include/images/icons/del.gif" alt="{_lang_delete}" title="{_lang_delete}" /></a></td>
+        <td colspan="2"><a href="admin.php?wars-next&amp;pkey={id}">-> Fightus Anfrage &uuml;bernehmen</a></td>
+    </tr>
+{EXPLODE}
+        <tr class="{class}">
+            <td>{team} vs. <img src="include/images/flags/{land2}" /> {gegner}</td>
+            <td align="center"><a href="javascript:del('{id}')"><img src="include/images/icons/del.gif" alt="{_lang_delete}" title="{_lang_delete}" /></a></td>
+            <td align="center"><a href="admin.php?wars-next&amp;pkey={id}"><img src="include/images/icons/edit.gif" alt="{_lang_change}" title="{_lang_change}" /></a></td>
+            <td><a href="admin.php?wars-last&amp;pkey={id}">-> als Lastwar &uuml;bernehmen</a></td>
+            <td align="center">
+        <a href="javascript:tm('{id}')">{topmatchstatus}</a>
+      </td>
+        </tr>
+{EXPLODE}
+        </table>
+        {MPL}
+    </td>
+</tr>
+</table>
+ 
+<script language="JavaScript" type="text/javascript">
+  function del ( id1 ) {
+    var x = confirm ( "{_lang_realydelete}" );
+        if ( x ) {
+          document.location.href="admin.php?wars-next&delete="+id1;
+        }
+    }
+ 
+    function tm ( id1 ) {
+    var x = confirm ( "Als Topmatch setzen?" );
+        if ( x ) {
+          document.location.href="admin.php?wars-next&topmatch="+id1;
+        }
+    }
+ 
+    function sichtbarA(){
+      if(document.form.mod.value=="neu"){
+          document.form.newmod.style.visibility="visible";
+        } else {
+          document.form.newmod.style.visibility="hidden";
+        }
+    }
+  function sichtbarB() {
+      if(document.form.game.value=="neu"){
+          document.form.newgame.style.visibility="visible";
+        } else {
+          document.form.newgame.style.visibility="hidden";
+        }
+  }
+    function sichtbarC() {
+      if(document.form.mtyp.value=="neu"){
+          document.form.newmtyp.style.visibility="visible";
+        } else {
+          document.form.newmtyp.style.visibility="hidden";
+        }
+  }
+  function visitpage () {
+    var page = document.form.page.value;
+    var n = 'page';
+    var o = '';
+    var f = window.open (page, n, o);
+    f.focus();
+  }
+    sichtbarB();
+    sichtbarC();
+    sichtbarA();
+</script>
+</div>

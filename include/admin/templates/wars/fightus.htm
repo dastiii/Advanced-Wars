@@ -1,0 +1,107 @@
+<script language="JavaScript">function MM_jumpMenu(targ,selObj,restore){eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");if (restore) selObj.selectedIndex=0;}</script>
+<div><div style="float:left";>Navigation:&nbsp;</div><div style="float:left;"><form name="navi">
+<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+<option value="admin.php?wars">[ bitte auswählen ]</option>
+<option value="admin.php?wars-last">Last Wars</option>
+<option value="admin.php?wars-next">Next Wars</option>
+<option value="admin.php?wars-fightus">FightUs-Anfragen</option>
+<option value="admin.php?wars-opponent">Gegnerverwaltung</option>
+<option value="admin.php?wars-teams">Teamverwaltung</option>
+<option value="admin.php?wars-check">Versionskontrolle</option>
+</select>
+</form>
+</div>
+</div>
+<br />
+<br />
+<br />
+<div>
+<table cellpadding="0" cellspacing="0" border="0"><tr><td><img src="include/images/icons/admin/wars_last.png" /></td><td width="30"></td><td valign="bottom"><h1>Fight-Us</h1></td></tr></table>
+<table width="60%" cellpadding="1" cellspacing="1" border="0" class="border">
+    <tr class="Chead">
+        <td colspan="4">FightUs-Anfragen</td>
+    </tr>
+{EXPLODE}
+    <tr class="Cnorm">
+        <td width="30%">{time}</td>
+        <td width="40%">{tid} vs. {oname}</td>
+        <td width="20%">{spiel}</td>
+        <td width="10%"><a href="admin.php?wars-fightus-{id}">mehr</td>
+    </tr>
+    <tr class="Chead">
+        <td colspan="4">&nbsp;</td>
+    </tr>
+ 
+{EXPLODE}
+</table>
+{EXPLODE}
+<form method="POST" action="admin.php?wars-fightus-{id}">
+<table width="60%" cellpadding="1" cellspacing="1" border="0" class="border">
+    <tr class="Chead">
+        <td colspan="2">Gegnerinformationen</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Gegner-Name</td>
+        <td width="70%">{oname}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Gegner-Tag</td>
+        <td width="70%">{otag}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Gegner-Herkunft</td>
+        <td width="70%"><img src="include/images/flags/{oland}" alt="" /></td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Gegner-Homepage</td>
+        <td width="70%">{opage}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Kontaktperson</td>
+        <td width="70%">{okontaktperson}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Kontakt-E-Mail</td>
+        <td width="70%">{oemail}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Kontakt-ICQ</td>
+        <td width="70%">{oicq}</td>
+    </tr>
+    <tr class="Chead">
+        <td colspan="2">Matchinformationen</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Server</td>
+        <td width="70%">{server}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Datum und Uhrzeit</td>
+        <td width="70%">{datum}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Team</td>
+        <td width="70%">{team}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">XonX</td>
+        <td width="70%">{xonx}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Spiel</td>
+        <td width="70%">{spiel}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Matchtyp</td>
+        <td width="70%">{matchtyp}</td>
+    </tr>
+    <tr class="Cnorm">
+        <td width="30%">Nachricht</td>
+        <td width="70%">{nachricht}</td>
+    </tr>
+    <tr>
+        <td width="100%" colspan="2" class="Chead"><input type="submit" value="Als Nextwar übernehmen" name="createop" /></td>
+    </tr>
+</table>
+{EXPLODE}
+</div>

@@ -1,0 +1,103 @@
+<div align="center"><form action="index.php?clans" method="post"><input type="submit" value="zurück zur Übersicht" /></form></div>
+<hr />
+<table width="100%" cellpadding="1" cellspacing="1" border="0" class="border">
+	<tr>
+		<th width="100%" colspan="2" class="Chead">
+			{name}
+		</th>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">Name:</td>
+		<td width="70%" class="Cmite">{name}</td>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">Clantag:</td>
+		<td width="70%" class="Cmite">{tag}</td>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">Land:</td>
+		<td width="70%" class="Cmite"><img src="include/images/flags/{land}" alt="{land}" /></td>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">Homepage:</td>
+		<td width="70%" class="Cmite"><a href="{homepage}" target="_blank">Homepage</a></td>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">Logo:</td>
+		<td width="70%" class="Cmite"><img src="{_if_{logo}=='http://'}include/images/logos/na.gif{_else_}{logo}{/_endif}" alt="CLANLOGO" /></td>
+	</tr>
+	<tr>
+		<th width="100%" colspan="2" class="Chead">
+			Kontakt
+		</th>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">Name:</td>
+		<td width="70%" class="Cmite">{kontaktname}</td>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">E-Mail:</td>
+		<td width="70%" class="Cmite">{kontaktemail}</td>
+	</tr>
+	<tr>
+		<td width="30%" class="Cnorm">ICQ:</td>
+		<td width="70%" class="Cmite">{kontakticq}</td>
+	</tr>
+</table>
+<br />
+<table width="100%" cellpadding="1" cellspacing="1" border="0" class="border">
+	<tr>
+		<th width="100%" colspan="3" class="Chead">
+			Statistik
+		</th>
+	</tr>
+	<tr class="Cmite" width="100%">
+		<td width="20%">Gewonnen</td>
+		<td width="60%"><table width="{percentWin}%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td style="background-color: green;">&nbsp;</td>
+						</tr>
+					</table>
+		</td>
+		<td class="Cdark" width="20%">{wins} ({percentWin}%)</td>
+	</tr>
+	<tr class="Cmite" width="100%">
+		<td align="left" width="20%">Unentschieden</td>
+		<td width="60%"><table width="{percentPat}%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td style="background-color: orange;">&nbsp;</td>
+						</tr>
+					</table>
+		</td>
+		<td class="Cdark" align="left" width="20%">{draws} ({percentPat}%)</td>
+	</tr>
+	<tr class="Cmite" width="100%">
+		<td align="left" width="20%">Verloren</td>
+		<td width="60%"><table width="{percentLos}%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td style="background-color: red;">&nbsp;</td>
+						</tr>
+					</table>
+		</td>
+		<td class="Cdark" align="left" width="20%">{loss} ({percentLos}%)</td>
+	</tr>
+</table>
+<br />
+<table width="100%" cellpadding="1" cellspacing="1" border="0" class="border">
+	<tr>
+		<th width="100%" colspan="3" class="Chead">
+			Last 5 Matches
+		</th>
+	</tr>
+{EXPLODE}
+<tr>
+	<td width="100%" colspan="3" class="Cnorm" style="text-align:center;">- Noch kein Match bestritten -</td>
+</tr>
+{EXPLODE}
+<tr>
+	<td width="40%" class="Cnorm">{team}</td>
+	<td width="40%" class="Cnorm"><img src="include/images/flags/{land2}" alt="{land2}" /> {gegner}</td>
+	<td width="20%" class="Cmite">{erg} <a href="?wars-more-{id}">details</a></td>
+</tr>
+{EXPLODE}
+</table>

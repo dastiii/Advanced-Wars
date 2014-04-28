@@ -1,0 +1,113 @@
+<h3>Statistik</h3>
+<table border="0" cellspacing="1" cellpadding="1" class="border" width="100%">
+<tr class="Chead">
+	<td align="center" colspan="4" >&nbsp;</td>
+</tr>
+<tr class="Cmite">
+	<td align="left" width="10%">Gewonnen</td>
+	<td width="72%"><table width="{WINH}%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td style="background-color: green;">&nbsp;</td>
+						</tr>
+					</table>
+	</td>
+	<td class="Cdark" align="left" width="18%">{WIN} ({WINH}%)</td>
+</tr>
+<tr class="Cmite" width="10%">
+	<td align="left">Unentschieden</td>
+	<td width="72%"><table width="{PATH}%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td style="background-color: orange;">&nbsp;</td>
+						</tr>
+					</table>
+	</td>
+	<td class="Cdark" align="left" width="18%">{PAT} ({PATH}%)</td>
+</tr>
+<tr class="Cmite" width="10%">
+	<td align="left">Verloren</td>
+	<td width="72%"><table width="{LOSH}%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td style="background-color: red;">&nbsp;</td>
+						</tr>
+					</table>
+	</td>
+	<td class="Cdark" align="left" width="18%">{LOS} ({LOSH}%)</td>
+</tr>
+</table>
+<h3>Next Matches</h3>
+<table width="100%" border="0" cellspacing="1" cellpadding="2" class="border" width="100%">
+<tr class="Chead">
+	<td width="30%">{_lang_date}</td>
+	<td width="30%">{_lang_opponent}</td>
+	<td width="30%">{_lang_squad}</td>
+	<td width="10%">{_lang_more}</td>
+</tr>
+{EXPLODE}
+<tr class="{class}">
+	<td>{time}</td>
+	<td><img src="include/images/flags/{land}" alt="" /> <a href="{page}" target="_blank">{gegner}</a></td>
+	<td>{team}</td>
+	<td><a href="index.php?wars-more-{id}">{_lang_more}</a></td>
+</tr>
+{EXPLODE}
+</table>
+
+<h3>Last Matches</h3>
+
+{EXPLODE}
+<form action="?wars-last" method="POST">
+<input type="hidden" name="che" value="1">
+<table width="100%" border="0" cellspacing="1" cellpadding="2" class="border">
+<tr class="Chead">
+	<td colspan="3"><b>{_lang_lastwars}</b></td>
+</tr>
+<tr class="Cnorm">
+	<td>Team:</td>
+	<td colspan="2"><select name="tid"><option value="">----------</option> {tid}</select></td>
+</tr>
+<tr class="Cmite">
+	<td>{_lang_result}:</td>
+	<td colspan="2"><select name="wpl">
+	<option value="">----------</option>
+	<option value="1">{_lang_win}</option>
+	<option value="2">{_lang_los}</option>
+	<option value="3">{_lang_pat}</option>
+	</select>
+	</td>
+</tr>
+<tr class="Cnorm">
+	<td>Game:</td>
+	<td colspan="2"><select name="spiel"><option value="">----------</option> {game}</select></td>
+</tr>
+<tr class="Cmite">
+	<td>Typ:</td>
+	<td colspan="2"><select name="typ"><option value="">----------</option> {typ}</td>
+</tr>
+<tr class="Cnorm">
+<td></td><td><input type="Submit" name="Go" value="Go"></td><td><a href="index.php?wars-last">Zeige alle {_lang_lastwars}</a></td>
+</tr>
+</table>
+</form>
+<br />
+<br />
+{EXPLODE}
+<table width="100%" border="0" cellspacing="1" cellpadding="1" class="border">
+<tr class="Chead">
+	<td width="15%">{_lang_date}</td>
+	<td width="20%">{_lang_squad}</td>
+	<td width="25%">{_lang_opponent}</td>
+	<td width="22%">{_lang_matchtype}</td>
+	<td width="10%">{_lang_result}</td>
+	<td width="8%"></td>
+</tr>
+{EXPLODE}
+<tr class="{class}">
+	<td>{time}</td>
+	<td>{team}</td>
+	<td><img src="include/images/flags/{land}" alt="" /> <a href="{page}" target="_blank">{gegner}</a></td>
+	<td>{mtyp}</td>
+  <td align="center"><span style="padding:2px; color: {farbe2};">{erg}</span></td>
+	<td><a href="index.php?wars-more-{id}">{_lang_more}</a></td>
+</tr>
+{EXPLODE}
+</table>

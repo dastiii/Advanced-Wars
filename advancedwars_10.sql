@@ -1,0 +1,1 @@
+ALTER TABLE `prefix_wars` ADD `topmatch` INT( 1 ) NOT NULL ;
