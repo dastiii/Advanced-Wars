@@ -20,6 +20,7 @@ Bei der Installation von Advanced Wars 1.0 bis einschließlich Version 1.2.1 wer
 - Folge den Anweisungen der Installation
 - Lösche nach der Installation, falls nicht bereits automatisch geschehen, die Dateien advancedwars_XXX.sql(*) und include/contents/advancedwars.php
 - Nun kannst du im Adminbereich Navigation ebenfalls die integrierte Clandatenbank einfügen. (clans.php)
+
 (*) = Alle .sql Dateien die mit advancedwars anfangen!
 
 ## Changelog
